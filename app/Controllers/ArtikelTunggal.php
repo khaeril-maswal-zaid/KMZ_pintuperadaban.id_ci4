@@ -91,33 +91,33 @@ class ArtikelTunggal extends BaseController
         if ($this->artikel  == $this->terbaru12[0] || $this->artikel  == $this->terbaru12[0]) {
             $this->terbaru12 =  $this->artikelmodel->orderBy('id', 'DESC')->findAll(2, 3);
         }
-        
+
         //untuk hitung data kunjungan --------------------
         $this->cvpagemodel->addcount(takeusers(), $this->artikel['id']);
-        
+
         /*
         NOW  = Jumlah visit (total kunjungan) dihitung dari data di database artikel yang telah diset sejak add artikel, selanjutnya + 1 setiap laod ***** / VSISIT-2
         BISAJUGA = Jumlah visit (total kunjungan) real dari di databese visit, hitungan murni total pengnjung berdasarkan ip adress ***** / VISIT-1
         */
-        
+
         $visit1 = $this->cvpagemodel->where('idartikel', $this->artikel['id'])->countAllResults(); //||Visit real|| *****
-        $visit2 = $this->artikel['visit']+1; //||Visit set add artikel||
-        
-        
+        $visit2 = $this->artikel['visit'] + 1; //||Visit set add artikel||
+
+
         /* Fiewers (Unique Visitors) adalah hitungan seseorang mengunjungi sebuah website lebih dari 1 kali, maka tetap dianggap sebagai 1 Unique Visitor*/
-           
+
         $rowviewers = [];
-        for($i=0; $i<$visit1; $i++){
+        for ($i = 0; $i < $visit1; $i++) {
             $rowviewers[] = $this->cvpagemodel->select('deteksi')->where('idartikel', $this->artikel['id'])->findAll()[$i]['deteksi'];
         }
-        
+
         $this->artikelmodel->save([
             'id'            => $this->artikel['id'],
-        
             'visit'         =>  $visit2, //$visit1, //(ambil di databese visit atau ambil di database artikel) *****
-            'view'          => count(array_unique($rowviewers)) 
+            'view'          => count(array_unique($rowviewers))
         ]);
-        
+
+
         //--------------------------------------------------
 
 
@@ -131,11 +131,11 @@ class ArtikelTunggal extends BaseController
             'penulis' => $penulis,
             'terbaru0' => $this->terbaru0[0],
             'terbaru12' => $this->terbaru12,
-            
+
             //Hitung hasil kujungan web
-            'visit'   => $this->artikel['visit']+1,
-            'viewers'   => $this->artikel['view']+50, //tambah 50 dulu wkwkw
-            
+            'visit'   => $this->artikel['visit'] + 1,
+            'viewers'   => $this->artikel['view'] + 50, //tambah 50 dulu wkwkw
+
 
             //POPULER
             'populer' => [
@@ -155,8 +155,8 @@ class ArtikelTunggal extends BaseController
             'time' => $this->artikel['time'],
 
             'active' => $active
-        ]; 
-        
+        ];
+
         return view('artikel/artikel1', $data);
     }
 }

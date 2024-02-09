@@ -1,6 +1,6 @@
 $(document).ready(function () {
-  const baseUrl = "http://localhost:8080/";
-  // const baseUrl = 'https://pintuperadaban.com/';
+  // const baseUrl = "http://localhost:8080/";
+  const baseUrl = "https://pintuperadaban.online/";
 
   //Form Validasi................
   // Example starter JavaScript for disabling form submissions if there are invalid fields

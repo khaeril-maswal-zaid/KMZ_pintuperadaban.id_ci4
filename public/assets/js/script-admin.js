@@ -1,6 +1,6 @@
 $(document).ready(function () {
-  // const baseUrl = 'https://pintuperadaban.com/';
-  const baseUrl = "http://localhost:8080/";
+  const baseUrl = "https://pintuperadaban.online/";
+  // const baseUrl = "http://localhost:8080/";
 
   //Datatable script
   //.........................................................................

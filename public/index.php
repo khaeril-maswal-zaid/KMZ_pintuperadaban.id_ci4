@@ -2,8 +2,8 @@
 
 // CONFIG COSTUM.......................................
 //Untuk URL pastikan menambahkan karakter "/" pada akhir URL
-define('URL', 'http://localhost:8080/');
-// define('URL', 'https://pintuperadaban.com/');
+// define('URL', 'http://localhost:8080/');
+define('URL', 'https://pintuperadaban.online/');
 
 define('BRAND', 'Pintu Peradaban');
 //......................................................

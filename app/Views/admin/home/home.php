@@ -15,7 +15,7 @@ $nickname = $namexp[0] . ' ' . $namexp[1][0] . "...";
             </h1>
             <h2 class="mb-3"><?= $adminlogin['nama'] ?></h2>
             <!-- <h2 class="mb-4">di situs "<?= BRAND ?> .Com"</h2> -->
-            <p class="col-md-8 fs-4">Di situs <span class="fst-italic">"Pintu Peradaban .Com"</span>, Menebar Kebaikan dan Manfaat Melalui Mimbar Informasi, Literasi Universal, Autentik, Serta Berkemajuan.</p>
+            <p class="col-md-8 fs-4">Di situs <span class="fst-italic">"Pintu Peradaban.Com"</span>, Menebar Kebaikan dan Manfaat Melalui Mimbar Informasi, Literasi Universal, Autentik, Serta Berkemajuan.</p>
             <button class="btn btn-primary btn-lg mt-3" type="button">Sign Out</button>
         </div>
     </div>

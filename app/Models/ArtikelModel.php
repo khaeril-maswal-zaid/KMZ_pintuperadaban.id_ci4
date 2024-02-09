@@ -7,9 +7,6 @@ use CodeIgniter\Model;
 class ArtikelModel extends Model
 {
     protected $table = 'artikel';
-    protected $useTimestamps = true;
-    protected $createdField  = false;
-    protected $updatedField   = false;
     protected $allowedFields = ['tanggal', 'yposting', 'waktu', 'time', 'slug', 'judul', 'description', 'srcimg', 'picture', 'oleh', 'kategori', 'level', 'artikel', 'visit', 'view'];
 
     public function filterAllArtikel($kategori)
