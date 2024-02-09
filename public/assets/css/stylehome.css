@@ -1,0 +1,108 @@
+/* HOME ................... */
+body.pengunjung {
+    background-color: #eaeaea;
+    /* background-image: url('../images/bg.png'); */
+}
+
+a {
+    text-decoration: none;
+}
+
+/* IPM News */
+
+.IPMers-img{
+    width: 100%;
+}
+
+.IPMers-img2{
+    width: 100%;
+}
+
+.IPMers-img3{
+    width: 100%;
+}
+
+.IPMers-text{
+    text-align: justify;
+}
+
+.IPMers-title{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.IPMers-tgl{
+    font-size: 70%;
+}
+ 
+/* agendaIPM */
+.agendaIPM {
+  color: #5a5a5a;
+}
+
+/* KETUM Masa kemasa */
+.ketuaMM .card-title {
+    font-size: 120%;
+}
+
+/* diluar lebar android umpan bailk */
+/* ....................................... */
+hr.ipmers-agenda {
+    display: none;
+}
+
+hr.kop-kartupeserta{
+    opacity: 1;
+    width: 89%;
+}
+
+/* Pages BUKAN IPM*/
+/* ........................... */
+@media(max-width:400px) {
+    .selesaidaftar-informasiakun h5 {
+        font-size: 1.15rem!important;
+    }
+
+    .validasi .text-end {
+        text-align: left!important;
+    }
+}
+
+
+/* responsive home dan IPMers*/
+/* ........................... */
+@media(max-width:750px){
+    div.agendaIPM {
+        margin-top: 25px;
+    }
+
+    div .deks-sembunyi {
+        display: none;
+    }
+
+    hr.ipmers-agenda {
+        display: block;
+        margin-top: 25px;
+    }
+
+    .w-smart{
+        display: block!important;
+    }
+
+    .w-deks{
+        display: none;
+    }
+
+    div.artikel-ipmers {
+        margin-top: 0px!important;
+    }
+
+    /* artikel IPMers */
+    div.artikel {
+        padding: 30px 0px!important;
+    }
+
+    .ket {
+        font-size: 81%;
+    }
+
+}
