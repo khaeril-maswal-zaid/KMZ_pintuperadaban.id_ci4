@@ -68,7 +68,7 @@
 
 
 <!-- Breaking News Start -->
-<div class="container-fluid bg-dark py-3 mb-3">
+<!-- <div class="container-fluid bg-dark py-3 mb-3">
     <div class="container">
         <div class="row align-items-center bg-dark">
             <div class="col-12">
@@ -82,9 +82,8 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->
 <!-- Breaking News End -->
-
 
 <!-- Populer Slider Start -->
 <div class="container-fluid pt-4 mb-3">
@@ -314,18 +313,19 @@
                             </div>
                         </div>
                     </div>
+
                     <div class="col-lg-6">
                         <div class="d-flex align-items-center bg-white mb-3" style="height: 150px;">
                             <div class="position-relative overflow-hidden" style="width: 150px; height: 100%;">
-                                <img class="img-fluid w-100 h-100" src="/assets/img/artikel/<?= url_title($artkelKtg[8]['kategori'], '', true) ?>/<?= $artkelKtg[8]['picture'] ?>" alt="<?= $artkelKtg[8]['picture'] ?>" style="object-fit: cover;">
+                                <img class="img-fluid w-100 h-100" src="/assets/img/artikel/<?= url_title($artkelKtg[7]['kategori'], '-', true) ?>/<?= $artkelKtg[7]['picture'] ?>" alt="<?= $artkelKtg[7]['picture'] ?>" style="object-fit: cover;">
                             </div>
 
                             <div class="w-100 h-100 px-3 d-flex flex-column justify-content-center border border-left-0">
                                 <div class="mb-2">
-                                    <a class="badge badge-primary text-uppercase font-weight-semi-bold p-1 mr-2" href="/category/<?= strtolower($artkelKtg[8]['kategori']) ?>"><?= $artkelKtg[8]['kategori'] ?></a>
-                                    <small><?= KelenderIna($artkelKtg[8]['tanggal']) ?></small>
+                                    <a class="badge badge-primary text-uppercase font-weight-semi-bold p-1 mr-2" href="/category/<?= url_title($artkelKtg[7]['kategori'], '-', true) ?>"><?= $artkelKtg[7]['kategori'] ?></a>
+                                    <small><?= KelenderIna($artkelKtg[7]['tanggal']) ?></small> f
                                 </div>
-                                <a class="h6 m-0 text-secondary text-uppercase font-weight-bold" href="/<?= $artkelKtg[8]['slug'] ?>/<?= $artkelKtg[8]['time'] ?>"><?= $artkelKtg[8]['judul'] ?></a>
+                                <a class="h6 m-0 text-secondary text-uppercase font-weight-bold" href="/<?= $artkelKtg[7]['slug'] ?>/<?= $artkelKtg[7]['time'] ?>"><?= $artkelKtg[7]['judul'] ?></a>
                             </div>
                         </div>
 

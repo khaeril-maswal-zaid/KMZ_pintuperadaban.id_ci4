@@ -46,32 +46,6 @@
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="/assets2/css/style.css" rel="stylesheet">
-
-
-
-    <!----------------GOOGLE AREA------------------GOOGLE AREA-------------------------GOOGLE AREA------------------------------------>
-
-    <!-- Google Adsesns -->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3151537190694448" crossorigin="anonymous"></script>
-    <script async custom-element="amp-auto-ads" src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js"></script>
-
-
-    <!-- Google Console-->
-    <meta name="google-site-verification" content="XdpLl3lNw2Xu_BOou4_qQPXfWHRsgKPcJH3CwIDL0L0" />
-
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-55PZ3R6P1C"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
-
-        gtag('config', 'G-55PZ3R6P1C');
-    </script>
-
 </head>
 
 <body class="<?= $classbody ?>">
@@ -89,21 +63,6 @@
 
     <!-- Template Javascript -->
     <script src="/assets2/js/main.js"></script>
-
-
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-55PZ3R6P1C"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
-
-        gtag('config', 'G-55PZ3R6P1C');
-    </script>
-
 </body>
 
 </html>

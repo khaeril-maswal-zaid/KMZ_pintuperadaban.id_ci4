@@ -40,7 +40,7 @@ class Kontak extends BaseController
 
             'kategoris' =>  $this->kategorimodel->findAll(),
             'endors' => $this->endorsmodel->findAll(),
-            
+
             //POPULER
             'populer' => [
                 'pp1' => $this->artikelmodel->special('level', 'populer-post', 1)[0],  //untuk populer post ke 1
@@ -51,8 +51,8 @@ class Kontak extends BaseController
             ],
 
             'description'   => "Menebar Kebaikan dan Manfaat Melalui Mimbar Informasi, Literasi Universal, Autentik, Serta Berkemajuan.",
-            'url'           => "https://pintuperadaban.com",
-            'title'         => "Pintu Peradaban .Com",
+            'url'           => URL,
+            'title'         => "Pintu Peradaban.Com",
             'image'         => "https://pintuperadaban.com/assets/img/web/pp.png",
             'time'          => 1652850000
         ];

@@ -46,10 +46,10 @@ class Category extends BaseController
     public function postedarticle($data)
     {
         //ambil data yg menulis artikel  by nama untuk fotonya
-        $penulis = [$this->adminmodel->where('nama', $data)->first()['foto'], 'admin'];
-
-        if ($penulis[0] == null) {
-            $penulis = [$this->adminmodel->where('nama', 'User Default')->first(), 'web'];
+        if ($this->adminmodel->where('nama', $data)->first() == null) {
+            $penulis = [$this->adminmodel->where('nama', 'User Default')->first()['foto'], 'web'];
+        } else {
+            $penulis = [$this->adminmodel->where('nama', $data)->first()['foto'], 'admin'];
         }
 
         return $penulis;
@@ -99,8 +99,8 @@ class Category extends BaseController
 
 
             'description'   => "Menebar Kebaikan dan Manfaat Melalui Mimbar Informasi, Literasi Universal, Autentik, Serta Berkemajuan.",
-            'url'           => "https://pintuperadaban.com",
-            'title'         => "Pintu Peradaban .Com",
+            'url'           => URL,
+            'title'         => "Pintu Peradaban.Com",
             'image'         => "https://pintuperadaban.com/assets/img/web/pp.png",
             'time'          => 1652850000
         ];

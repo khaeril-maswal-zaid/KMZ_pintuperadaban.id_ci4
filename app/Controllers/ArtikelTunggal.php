@@ -49,7 +49,8 @@ class ArtikelTunggal extends BaseController
     public function artikel1($slug, $time)
     {
         $this->dataartikel = $this->artikelmodel->orlike('slug', $slug);
-        $this->dataartikel = $this->artikelmodel->orlike('time', $time);
+        // $this->dataartikel = $this->artikelmodel->orlike('time', $time);
+        //Matikan dulu karena selalu salah deteksi artikel
 
         //Ambil data artikel 
         $this->artikel = $this->dataartikel->first();

@@ -19,6 +19,7 @@ $routes->get('/adminppc/artikel/(:any)', 'Adminppc::artikel/$1');
 $routes->get('/adminppc/artikel/(:any)/(:any)/(:any)', 'Adminppc::artikel/$1/$2/$3');
 $routes->get('/adminppc/kategori', 'Adminppc::kategori');
 $routes->get('/adminppc/endors', 'Adminppc::Endors');
+$routes->get('/adminppc/endors', 'Adminppc::Endors');
 $routes->post('/adminppc/queriajaxeditendors', 'AdminppcProses::queriajaxeditendors');
 
 
@@ -69,10 +70,10 @@ $routes->get('/adminppc/(:any)', 'Adminppc::home/$1');
 //LINK API
 $routes->get('/api/artikel-populer/(:any)', 'ApiPpc::populerpost/$1'); //API Populer
 
-
-
 //Artikel Kategori
 $routes->get('/category/(:any)', 'Category::index/$1');
+
+$routes->get('/kontak', 'Kontak::index');
 
 //Artikel Tunggal
 $routes->get('/(:any)/(:any)', 'ArtikelTunggal::artikel1/$1/$2');

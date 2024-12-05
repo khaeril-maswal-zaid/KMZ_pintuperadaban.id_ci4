@@ -51,8 +51,8 @@
                             <span><?= $artikel['oleh'] ?></span>
                         </div>
                         <div class="d-flex align-items-center">
-                            <span class="ml-3"><i class="far fa-eye mr-2"></i><?=$visit?></span>
-                            <span class="ml-3"><i class="far fa-solid fa-user mr-2"></i><?=$viewers?></span>
+                            <span class="ml-3"><i class="far fa-eye mr-2"></i><?= $visit ?></span>
+                            <span class="ml-3"><i class="far fa-solid fa-user mr-2"></i><?= $viewers ?></span>
                         </div>
                     </div>
                 </div>
@@ -60,19 +60,19 @@
 
 
                 <!--<hr>-->
-                
+
                 <!-- Iklan Area Start -->
                 <div class="col-lg-12 mb-3 px-0">
                     <div class="d-block d-md-none">
                         <!-- Lipmb lebar ti-->
                         <?= $endors[3]['hrefsourcelef'] .  $endors[3]['wa'] . $endors[3]['sourcechat'] . $endors[3]['chat'] . $endors[3]['hrefsourceright'] . $endors[3]['imgsourceleft'] . $endors[3]['idbrand'] . $endors[3]['imgsourceright'] ?>
                     </div>
-                    
+
                     <div class="d-none d-md-block">
                         <!-- Lipmb 1x1 ti-->
                         <?= $endors[4]['hrefsourcelef'] .  $endors[4]['wa'] . $endors[4]['sourcechat'] . $endors[4]['chat'] . $endors[4]['hrefsourceright'] . $endors[4]['imgsourceleft'] . $endors[4]['idbrand'] . $endors[4]['imgsourceright'] ?>
                     </div>
-                    
+
                     <!-- <a href=""><img class="img-fluid w-100" src="#" alt=""></a> -->
                     <amp-auto-ads type="adsense" data-ad-client="ca-pub-3151537190694448"></amp-auto-ads>
                 </div>
@@ -141,8 +141,8 @@
                                     <small><?= $terbaru0['oleh'] ?></small>
                                 </div>
                                 <div class="d-flex align-items-center">
-                                     <small class="ml-3"><i class="far fa-eye mr-2"></i><?= $terbaru0['visit'] ?></small>
-                                        <!--<small class="ml-3"><i class="far fa-comment mr-2"></i>123</small> -->
+                                    <small class="ml-3"><i class="far fa-eye mr-2"></i><?= $terbaru0['visit'] ?></small>
+                                    <!--<small class="ml-3"><i class="far fa-comment mr-2"></i>123</small> -->
                                 </div>
                             </div>
                         </div>
@@ -154,7 +154,7 @@
                         <div class="col-lg-6">
                             <div class="d-flex align-items-center bg-white mb-3" style="height: 110px;">
                                 <div class="position-relative overflow-hidden" style="width: 150px; height: 100%;">
-                                    <img class="img-fluid w-100 h-100" src="/assets/img/artikel/<?= url_title($tbr12['kategori'], '', true) ?>/<?= $tbr12['picture'] ?>" alt="" style="object-fit: cover;">
+                                    <img class="img-fluid w-100 h-100" src="/assets/img/artikel/<?= url_title($tbr12['kategori'], '-', true) ?>/<?= $tbr12['picture'] ?>" alt="" style="object-fit: cover;">
                                 </div>
 
                                 <div class="w-100 h-100 px-3 d-flex flex-column justify-content-center border border-left-0">
