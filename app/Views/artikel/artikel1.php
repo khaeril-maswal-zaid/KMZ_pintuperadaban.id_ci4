@@ -114,14 +114,14 @@
                 <hr>
 
                 <!-- New Post Start -->
-                <div class="col-12">
+                <div class="col-12 px-0">
                     <div class="section-title">
                         <h4 class="m-0 text-uppercase font-weight-bold">Latest News</h4>
                         <!--<a class="text-secondary font-weight-medium text-decoration-none" href="">View All</a>-->
                     </div>
                 </div>
 
-                <div class="col-lg-12">
+                <div class="col-lg-12 px-0">
                     <div class="row news-lg mx-0 mb-3">
                         <div class="col-md-6 h-100 px-0 ">
                             <img class="img-fluid h-100 w-100" src="/assets/img/artikel/<?= url_title($terbaru0['kategori'], '', true) ?>/<?= $terbaru0['picture'] ?>" style="object-fit: cover;">
