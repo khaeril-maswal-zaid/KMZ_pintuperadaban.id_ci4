@@ -58,7 +58,7 @@ class Home extends BaseController
     {
         //ambil data yg menulis artikel  by nama untuk fotonya
         if ($this->adminmodel->where('nama', $data)->first() == null) {
-            $penulis = [$this->adminmodel->where('nama', 'User Default')->first()['foto'], 'web'];
+            $penulis = [$this->adminmodel->where('nama', 'Editor Ppc')->first()['foto'], 'web'];
         } else {
             $penulis = [$this->adminmodel->where('nama', $data)->first()['foto'], 'admin'];
         }

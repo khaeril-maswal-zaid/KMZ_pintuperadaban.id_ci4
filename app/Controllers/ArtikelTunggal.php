@@ -69,7 +69,7 @@ class ArtikelTunggal extends BaseController
         //ambil data yg menulis artikel by nama
         $penulis = [$this->adminmodel->where('nama', $this->artikel['oleh'])->first(), 'admin'];
         if ($penulis[0] == null) {
-            $penulis = [$this->adminmodel->where('nama', 'User Default')->first(), 'web'];
+            $penulis = [$this->adminmodel->where('nama', 'Editor Ppc')->first(), 'web'];
         }
 
         //untuk class css yg aktif
