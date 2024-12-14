@@ -1,22 +1,25 @@
 <div class="col-lg-4">
     <!-- Ads Start "IKLAN" -->
     <div class="mb-3">
-        <div class="<?= $display[0] ?>">
+        <div class="d-none d-md-block">
             <div class="section-title mb-0">
-                <h4 class="m-0 text-uppercase font-weight-bold"><?= $endors[0]['hrefsourcelef'] .  $endors[0]['wa'] . $endors[0]['sourcechat'] . $endors[0]['chat'] . $endors[0]['hrefsourceright'] . $endors[0]['brand'] ?></a></h4>
+                <h4 class="m-0 text-uppercase font-weight-bold">
+                    Advertisement
+                </h4>
             </div>
-
             <div class="bg-white text-center border border-top-0 p-3">
-                <?= $endors[0]['hrefsourcelef'] .  $endors[0]['wa'] . $endors[0]['sourcechat'] . $endors[0]['chat'] . $endors[0]['hrefsourceright'] . $endors[0]['imgsourceleft'] . $endors[0]['idbrand'] . $endors[0]['imgsourceright'] ?>
+                <img
+                    src="/assets/img/advertisement/flayer-1-1.png"
+                    class="w-100"
+                    alt="Iklan Banner" />
             </div>
         </div>
-
-        <div class="<?= $display[1] ?>">
-            <?= $endors[3]['hrefsourcelef'] .  $endors[3]['wa'] . $endors[3]['sourcechat'] . $endors[3]['chat'] . $endors[3]['hrefsourceright'] . $endors[3]['imgsourceleft'] . $endors[3]['idbrand'] . $endors[3]['imgsourceright'] ?>
+        <div class="d-block d-md-none">
+            <img
+                src="/assets/img/advertisement/banner-1-2.png"
+                class="w-100"
+                alt="Iklan Banner" />
         </div>
-
-
-        <amp-auto-ads type="adsense" data-ad-client="ca-pub-3151537190694448"></amp-auto-ads>
     </div>
     <!-- Ads End -->
 

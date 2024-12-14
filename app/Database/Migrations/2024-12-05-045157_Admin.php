@@ -25,7 +25,16 @@ class Admin extends Migration
                 'constraint' => '255',  // Menyimpan URL atau path gambar
                 'null' => true,  // Bisa kosong jika tidak ada gambar
             ],
-
+            'username' => [
+                'type' => 'VARCHAR',
+                'constraint' => '255',  // Menyimpan URL atau path gambar
+                'null' => true,  // Bisa kosong jika tidak ada gambar
+            ],
+            'password' => [
+                'type' => 'VARCHAR',
+                'constraint' => '255',  // Menyimpan URL atau path gambar
+                'null' => true,  // Bisa kosong jika tidak ada gambar
+            ],
         ]);
 
         $this->forge->addKey('id', true);  // Menjadikan kolom 'id' sebagai primary key

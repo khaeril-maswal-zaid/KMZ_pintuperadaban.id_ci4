@@ -105,7 +105,7 @@ class ArtikelTunggal extends BaseController
         $visit2 = $this->artikel['visit'] + 1; //||Visit set add artikel||
 
 
-        /* Fiewers (Unique Visitors) adalah hitungan seseorang mengunjungi sebuah website lebih dari 1 kali, maka tetap dianggap sebagai 1 Unique Visitor*/
+        /* Viewers (Unique Visitors) adalah hitungan seseorang mengunjungi sebuah website lebih dari 1 kali, maka tetap dianggap sebagai 1 Unique Visitor*/
 
         $rowviewers = [];
         for ($i = 0; $i < $visit1; $i++) {

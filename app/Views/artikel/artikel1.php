@@ -34,7 +34,8 @@
                     <img class="img-fluid w-100" src="/assets/img/artikel/<?= url_title($artikel['kategori'], '', true) ?>/<?= $artikel['picture'] ?>" style="object-fit: cover;">
 
                     <div class="bg-white border border-top-0 p-4">
-                        <p class="fw-lighter text-secondary" style="font-size: 75%;"> Source Image : <a href="<?= $artikel['srcimg'] ?>" target="_blank" class="text-secondary"> <?= $artikel['srcimg'] ?> ...</a> </p>
+                        <!-- Tutup dulu karena jelk di lihat sementara  -->
+                        <!-- <p class="fw-lighter text-secondary" style="font-size: 75%;"> Source Image : <a href="<?= $artikel['srcimg'] ?>" target="_blank" class="text-secondary"> <?= $artikel['srcimg'] ?> ...</a> </p> -->
 
                         <div class="mb-3">
                             <a class="badge badge-primary text-uppercase font-weight-semi-bold p-2 mr-2" href="/category/<?= url_title($artikel['kategori'], '', true) ?>"><?= $artikel['kategori'] ?></a>
@@ -61,20 +62,28 @@
 
                 <!--<hr>-->
 
-                <!-- Iklan Area Start -->
-                <div class="col-lg-12 mb-3 px-0">
-                    <div class="d-block d-md-none">
-                        <!-- Lipmb lebar ti-->
-                        <?= $endors[3]['hrefsourcelef'] .  $endors[3]['wa'] . $endors[3]['sourcechat'] . $endors[3]['chat'] . $endors[3]['hrefsourceright'] . $endors[3]['imgsourceleft'] . $endors[3]['idbrand'] . $endors[3]['imgsourceright'] ?>
+                <!-- Iklan Area Start Banner buttom -->
+                <div class="col-lg-12">
+                    <div class="d-block d-md-none mb-3">
+                        <div class="section-title mb-0">
+                            <h4 class="m-0 text-uppercase font-weight-bold">
+                                Advertisement
+                            </h4>
+                        </div>
+                        <div class="bg-white text-center border border-top-0 p-3">
+                            <img
+                                src="/assets/img/advertisement/flayer-1-1.png"
+                                class="w-100"
+                                alt="Iklan Banner" />
+                        </div>
                     </div>
 
-                    <div class="d-none d-md-block">
-                        <!-- Lipmb 1x1 ti-->
-                        <?= $endors[4]['hrefsourcelef'] .  $endors[4]['wa'] . $endors[4]['sourcechat'] . $endors[4]['chat'] . $endors[4]['hrefsourceright'] . $endors[4]['imgsourceleft'] . $endors[4]['idbrand'] . $endors[4]['imgsourceright'] ?>
+                    <div class="d-none d-md-block mb-3">
+                        <img
+                            src="/assets/img/advertisement/banner-1-2.png"
+                            class="w-100"
+                            alt="Iklan Banner" />
                     </div>
-
-                    <!-- <a href=""><img class="img-fluid w-100" src="#" alt=""></a> -->
-                    <amp-auto-ads type="adsense" data-ad-client="ca-pub-3151537190694448"></amp-auto-ads>
                 </div>
                 <!-- Iklan Area End -->
 

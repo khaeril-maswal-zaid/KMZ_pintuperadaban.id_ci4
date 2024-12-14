@@ -37,7 +37,7 @@ $routes->get('/adminppcproses/deleteendors/(:any)', 'AdminppcProses::deleteendor
 //Email
 $routes->get('/adminppc/shareemail/truncate', 'ShareEmail::truncate');
 $routes->get('/adminppc/shareemail/sendedto/(:any)/(:any)', 'ShareEmail::sendedto/$1/$2');
-$routes->get('/adminppc/shareemail/(:any)/(:any)', 'ShareEmail/$1/$2');
+$routes->get('/adminppc/shareemail/(:any)/(:any)', 'ShareEmail::index/$1/$2');
 
 
 

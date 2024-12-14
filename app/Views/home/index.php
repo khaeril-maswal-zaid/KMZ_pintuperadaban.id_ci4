@@ -121,14 +121,11 @@
                 <div class="row">
 
 
-                    <!-- Iklan Area Start -->
+                    <!-- Iklan Area Start Banner TOP -->
                     <div class="col-lg-12 mb-3">
-                        <?= $endors[1]['hrefsourcelef'] .  $endors[1]['wa'] . $endors[1]['sourcechat'] . $endors[1]['chat'] . $endors[1]['hrefsourceright'] . $endors[1]['imgsourceleft'] . $endors[1]['idbrand'] . $endors[1]['imgsourceright'] ?>
-
-                        <amp-auto-ads type="adsense" data-ad-client="ca-pub-3151537190694448"></amp-auto-ads>
+                        <img src="/assets/img/advertisement/banner-728-90.png" class="w-100" alt="Iklan Banner" />
                     </div>
                     <!-- Iklan Area End -->
-
 
                     <!-- Latest News Area Start -->
                     <div class="col-12">
@@ -227,23 +224,28 @@
                     <hr>
 
 
-                    <!-- Iklan Area Start -->
-                    <div class="col-lg-12 mb-3">
-                        <div class="d-block d-md-none">
+                    <!-- Iklan Area Start Banner buttom -->
+                    <div class="col-lg-12">
+                        <div class="d-block d-md-none mb-3">
                             <div class="section-title mb-0">
-                                <h4 class="m-0 text-uppercase font-weight-bold"><?= $endors[0]['hrefsourcelef'] .  $endors[0]['wa'] . $endors[0]['sourcechat'] . $endors[0]['chat'] . $endors[0]['hrefsourceright'] . $endors[0]['brand'] ?></a></h4>
+                                <h4 class="m-0 text-uppercase font-weight-bold">
+                                    Advertisement
+                                </h4>
                             </div>
-
                             <div class="bg-white text-center border border-top-0 p-3">
-                                <?= $endors[0]['hrefsourcelef'] .  $endors[0]['wa'] . $endors[0]['sourcechat'] . $endors[0]['chat'] . $endors[0]['hrefsourceright'] . $endors[0]['imgsourceleft'] . $endors[0]['idbrand'] . $endors[0]['imgsourceright'] ?>
+                                <img
+                                    src="/assets/img/advertisement/flayer-1-1.png"
+                                    class="w-100"
+                                    alt="Iklan Banner" />
                             </div>
                         </div>
 
-                        <div class="d-none d-md-block">
-                            <?= $endors[2]['hrefsourcelef'] .  $endors[2]['wa'] . $endors[2]['sourcechat'] . $endors[2]['chat'] . $endors[2]['hrefsourceright'] . $endors[2]['imgsourceleft'] . $endors[2]['idbrand'] . $endors[2]['imgsourceright'] ?>
+                        <div class="d-none d-md-block mb-3">
+                            <img
+                                src="/assets/img/advertisement/banner-1-2.png"
+                                class="w-100"
+                                alt="Iklan Banner" />
                         </div>
-
-                        <amp-auto-ads type="adsense" data-ad-client="ca-pub-3151537190694448"></amp-auto-ads>
                     </div>
                     <!-- Iklan Area End -->
 

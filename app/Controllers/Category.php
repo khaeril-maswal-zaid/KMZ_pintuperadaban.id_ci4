@@ -101,7 +101,7 @@ class Category extends BaseController
             'description'   => "Menebar Kebaikan dan Manfaat Melalui Mimbar Informasi, Literasi Universal, Autentik, Serta Berkemajuan.",
             'url'           => URL,
             'title'         => "Pintu Peradaban.Com",
-            'image'         => "https://pintuperadaban.com/assets/img/web/pp.png",
+            'image'         => URL . "assets/img/web/pp.png",
             'time'          => 1652850000
         ];
         // dd($data['artikelcategoryBig']);

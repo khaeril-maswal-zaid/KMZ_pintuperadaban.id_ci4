@@ -54,19 +54,8 @@ class ShareEmail extends BaseController
             return redirect()->to(URL . 'adminppc');
         }
 
-        //Ambil data email dari API camaba UMB 2021 & 2022 ***
-        $datajson1 = file_get_contents("https://lipmb.umbulukumba.ac.id/APIcamaba/?select=email&database=2023");
-        $datajson2 = file_get_contents("https://lipmb.umbulukumba.ac.id/APIcamaba/?select=email&database=2022");
-        $datajson3 = file_get_contents("https://lipmb.umbulukumba.ac.id/APIcamaba/?select=alamat_email&database=2021");
-
-        // dd($datajson2);
-
-        $rowsemail2 = json_decode($datajson1, TRUE);
-        $rowsemail3 = json_decode($datajson2, TRUE);
-        $rowsemail4 = json_decode($datajson3, TRUE);
-
         $this->dataartikel = $this->artikelmodel->orlike('slug', $slug);
-        $this->dataartikel = $this->artikelmodel->orlike('time', $time);
+        // $this->dataartikel = $this->artikelmodel->orlike('time', $time);
 
         //Ambil data artikel 
         $dataartikel = $this->dataartikel->first();
@@ -82,21 +71,23 @@ class ShareEmail extends BaseController
         }
 
 
-        $rowsemailG = array_merge($rowsemail1, $rowsemail2, $rowsemail3, $rowsemail4); //Gabungkan Aray email dari 3 sumber
-        $rowsemailU = array_unique($rowsemailG); // Gabungkan Array duplicate
+        // $rowsemailG = array_merge($rowsemail1, $rowsemail2, $rowsemail3, $rowsemail4); //Gabungkan Aray email dari 3 sumber
+        $rowsemailU = array_unique($rowsemail1); // Gabungkan Array duplicate
         $rowsemailIm = implode('*||*', $rowsemailU); // Jadikan string terlebih dahulu
         $rowsemail = explode('*||*', $rowsemailIm); // dari string jadikan Array supya index berurut
 
         $confemail = \Config\Services::email();
 
-        // dd($rowsemail);
-
         $case_insensitive = $this->emailsended->where('idartikel', $dataartikel['id'])->countAllResults();
         define('IIE', $case_insensitive);
 
+
+        dd($rowsemail);
+        //50 adalah jumlah limit yg cocok untuk send email massal tapi jumlahnya harus lebih besar dengan jumlah langganan
+
         for ($ii = IIE; $ii < (50 + IIE); $ii++) { // 50+IIE
             $confemail->setTo($rowsemail[$ii]); //muhammadkhaerilzaid@gmail.com || $rowsemail[$ii]
-            $confemail->setFrom('official@pintuperadaban.com', 'Pintu Peradaban.Com');
+            $confemail->setFrom($confemail->fromEmail, $confemail->fromName);
             $confemail->setSubject($dataartikel['judul']);
             $confemail->setMessage(
                 $expArtikel[0] . '</p>' . $expArtikel[1] . '</p>' .
@@ -109,17 +100,17 @@ class ShareEmail extends BaseController
 
                 $this->emailsended->save([
                     'id'            => '',
-
                     'emailsended' => $rowsemail[$ii],
                     'idartikel' => $dataartikel['id']
                 ]);
             } else {
                 $data = $confemail->printDebugger(['headers']);
                 print_r($data);
+                die;
             }
         }
 
-        return redirect()->to(base_url() . '/adminppc/artikel/' . $dataartikel['kategori']);
+        return redirect()->to(URL . 'adminppc/artikel/' . $dataartikel['kategori']);
     }
 
     public function berhasilTerkirim($data)
@@ -135,13 +126,12 @@ class ShareEmail extends BaseController
         }
 
         $this->dataartikel = $this->artikelmodel->orlike('slug', $slug);
-        $this->dataartikel = $this->artikelmodel->orlike('time', $time);
+        // $this->dataartikel = $this->artikelmodel->orlike('time', $time);
 
         //Ambil data artikel 
         $dataartikel = $this->dataartikel->first();
 
         // dd($dataartikel);
-
 
         $data = [
             'title' => "Admin | " . $this->adminlogin['nama'],
