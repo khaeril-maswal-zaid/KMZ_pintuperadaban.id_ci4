@@ -81,8 +81,6 @@ class ShareEmail extends BaseController
         $case_insensitive = $this->emailsended->where('idartikel', $dataartikel['id'])->countAllResults();
         define('IIE', $case_insensitive);
 
-
-        dd($rowsemail);
         //50 adalah jumlah limit yg cocok untuk send email massal tapi jumlahnya harus lebih besar dengan jumlah langganan
 
         for ($ii = IIE; $ii < (50 + IIE); $ii++) { // 50+IIE
